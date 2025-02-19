@@ -3,7 +3,7 @@ def proyecto_schema(proyecto) -> dict:
             "id_fto": str(proyecto["id_fto"]),
             "NOMBRE_FTO": str(proyecto["NOMBRE_FTO"]),
             "NOMBRE_PROYECTO":str(proyecto["NOMBRE_PROYECTO"]),
-            "CODIGO":str(proyecto["CÓDIGO"]),
+            "CODIGO":str(proyecto["CODIGO"]),
             "DIRECCION":str(proyecto["DIRECCION"]),
             "COMUNA":str(proyecto["COMUNA"]),
             "ENTIDAD_PATROCINANTE":str(proyecto["ENTIDAD_PATROCINANTE"]),
