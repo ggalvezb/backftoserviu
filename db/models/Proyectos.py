@@ -8,7 +8,7 @@ class Proyecto(BaseModel):
     id_fto: Optional[str]
     NOMBRE_FTO: Optional[str]
     NOMBRE_PROYECTO:Optional[str]
-    CÓDIGO:Optional[str]
+    CODIGO:Optional[str]
     DIRECCION:Optional[str]
     COMUNA:Optional[str]
     ENTIDAD_PATROCINANTE:Optional[str]
@@ -22,10 +22,10 @@ class Proyecto(BaseModel):
     PORCENTAJE_DE_AVANCE_REAL_ACUMULADO_A_LA_FECHA:Optional[str]
     PORCENTAJE_DE_AVANCE_REAL_HISTORICO:Optional[list]
     PORCENTAJES_DE_AVANCE_PROGRAMADO:Optional[list]
-    CERTIFIACIONES_PARA_OBTENCIÓN_DE_RECEPCIÓN_FINAL:Optional[list]
-    N_DE_INGRESO_DE_DOCUMENTACIÓN:Optional[list]
-    FECHA_DE_INGRESO_DE_DOCUMENTACIÓN:Optional[list]
-    PLAZO_NORMATIVO_ASOCIADO_A_CERTIFICACIÓN:Optional[list]
+    CERTIFIACIONES_PARA_OBTENCIÓN_DE_RECEPCION_FINAL:Optional[list]
+    N_DE_INGRESO_DE_DOCUMENTACION:Optional[list]
+    FECHA_DE_INGRESO_DE_DOCUMENTACION:Optional[list]
+    PLAZO_NORMATIVO_ASOCIADO_A_CERTIFICACION:Optional[list]
     OBSERVACIONES:Optional[list]
 
 
