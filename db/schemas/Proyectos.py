@@ -1,5 +1,5 @@
 def proyecto_schema(proyecto) -> dict:
-    return {"id": str(proyecto["id"]),
+    return {"id": str(proyecto["_id"]),
             "id_fto": str(proyecto["id_fto"]),
             "NOMBRE_FTO": str(proyecto["NOMBRE_FTO"]),
             "NOMBRE_PROYECTO":str(proyecto["NOMBRE_PROYECTO"]),
@@ -23,6 +23,7 @@ def proyecto_schema(proyecto) -> dict:
             "PLAZO_NORMATIVO_ASOCIADO_A_CERTIFICACIÓN":list(proyecto["PLAZO_NORMATIVO_ASOCIADO_A_CERTIFICACIÓN"]),
             "OBSERVACIONES":list(proyecto["OBSERVACIONES"]),
     }
+
 #test
 def proyectos_schema(proyectos) -> list:
     return [proyecto_schema(proyecto) for proyecto in proyectos]
