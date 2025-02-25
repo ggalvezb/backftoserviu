@@ -39,6 +39,8 @@ async def proyecto(proyecto:Proyecto):
 
 
 
+
+
 #Edito un campo de una entidadpatrocinante en la BD
 #@router.put("/", response_model=Proyecto,description="Esta funcion Edita por ID")
 #async def proyecto(beneficiario:Proyecto):
