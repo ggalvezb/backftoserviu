@@ -43,9 +43,10 @@ def edito_registro(Entidad,entidad_schema,dato,campo_de_busqueda,campo_a_buscar,
     print(campo_de_busqueda)
     print(campo_a_buscar)
     registro_dict=dict(dato)
+    del registro_dict["id"]
     print(registro_dict)
-    #del registro_dict["id"]
     try:
+        print("entro")
         base_datos.find_one_and_replace({campo_de_busqueda: ObjectId(campo_a_buscar)}, registro_dict)
         return {"Usuario Actualizado"}
     except:

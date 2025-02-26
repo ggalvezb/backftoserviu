@@ -26,6 +26,17 @@ async def fto(id: str):
     return fun.elimino_registro(registro_bd,ObjectId(id))
 
 #Edito un campo de una fto en la BD
-@router.put("/", response_model=Administrador,description="Esta funcion busca por usuario_id")
-async def fto(beneficiario:Administrador):
-    return fun.edito_registro(Administrador,admin_schema,beneficiario,"usuario_id",beneficiario.usuario_id,registro_bd)
+#@router.put("/", response_model=Administrador,description="Esta funcion busca por id y edita el campo")
+#async def fto(beneficiario:Administrador):
+#    return fun.edito_registro(Administrador,admin_schema,beneficiario,"_id",beneficiario.id,registro_bd)
+
+#Edito un campo de una fto en la BD si que si
+@router.put("/", response_model=Administrador,description="Esta funcion busca por ID y edita el campo")
+async def proyecto(proyecto:Administrador):
+    registro_dict=dict(proyecto)
+    del registro_dict["id"]
+    try:
+        registro_bd.find_one_and_replace({"_id": ObjectId(proyecto.id)}, registro_dict)
+    except:
+        return {"Error: No se a encontrado usuario"}
+    return proyecto
